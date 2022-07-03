@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+:root {
+  --success-color: #adff2f;
+  --error-color: #d12a00;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(to top left, #33ccff 0%, #006699 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+.container {
+  background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+  border-radius: 10px;
+  box-shadow: 2px 5px 5px rgb(126, 249, 255);
+  width: 400px;
+}
+h2 {
+  text-align: center;
+  margin: 0 0 30px;
+}
+.form {
+  padding: 40px 40px;
+}
+.form-control {
+  margin-bottom: 12px;
+  padding-bottom: 25px;
+  position: relative;
+}
+.form-control label {
+  display: block;
+  color: brown;
+  margin-bottom: 6px;
+  font-weight: bolder;
+}
+.form-control input {
+  border: 4px solid rgba(239, 55, 55, 0);
+  border-radius: 6px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 12px;
+}
+
+//focus where I click
+
+.form-control input:focus {
+  outline: 0;
+  border-color: #39377e;
+}
+.form-control.success input {
+  border-color: var(--success-color);
+}
+.form-control.error input {
+  border-color: var(--error-color);
+}
+.form-control small {
+  color: red;
+  position: absolute;
+  bottom: 0;
+  visibility: hidden;
+  display: none;
+}
+.form-control.error small {
+  visibility: visible;
+}
+
+.form button {
+  cursor: pointer;
+  font-size: 15px;
+  padding: 10px;
+  width: 100%;
+  background-color: rgb(2, 2, 2);
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  color: antiquewhite;
+  display: block;
+}
